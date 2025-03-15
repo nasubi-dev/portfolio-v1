@@ -30,49 +30,36 @@ const hobbiesList: HobbyData[] = [
     icon: "material-symbols:code-blocks-outline",
     description: `Webアプリケーションを作るのが好きです｡
       最近はReact + Vite + TypeScriptで開発しています｡
-      このサイトはこの組み合わせで作られています｡
-      高校の頃はVueでコードを書いたので､Reactの仕様に苦戦している｡
-      特に単方向バインディングとエコシステム辺りが違いすぎて勉強中｡`,
+      このサイトもこの構成です｡`,
   },
   {
     name: "Read",
     icon: "material-symbols:book",
-    description: `本好きが高じて本屋でバイトをはじめました｡
+    description: `
     愛書は中村文則の｢遮光｣です｡"恋人だったもの"をいつも持ち歩いている虚言癖のある男の話なのですが､
-    こんなあらすじだけでは伝わらない良さが詰まっているのでぜひ読んでください｡なんなら私が貸します｡
-    他にも伊藤計劃のユートピアな近未来に馴染めない女の子達の壮大な自殺と世界の話｢ハーモニー｣､
-    チャック・パラニュークの独特の読み応えの文章がクセになる｢ファイト・クラブ｣も大好きな本です｡
-    布教計画を立案中...`,
+    こんなあらすじだけでは伝わらない良さが詰まっているのでぜひ読んでください｡なんなら私が貸します｡`,
   },
   {
     name: "Anime",
     icon: "material-symbols:smart-display-outline",
-    description: `90's年代のアニメが好きです｡ARIAとか新世紀エヴァンゲリオンとかFLCLが好みド直球｡
-    京アニやきらら作品も好きです｡というか､アニメぜんぶ好きです｡
-    声優には詳しくない｡黒沢ともよさんと悠木碧さんしかわからない｡あと杉田さん｡`,
+    description: `90'sのアニメが好きです｡ARIAとか新世紀エヴァンゲリオンとかFLCLが好みド直球｡`,
   },
   {
     name: "Movie",
     icon: "material-symbols:movie",
     description: `デビッド・フィンチャー監督のFight ClubとかSevenなどのバイオレンス&サスペンスが好きです｡
-    ノーラン監督のSF映画､TENETとかインターステラーもインセプションも全てが好きです｡ブレードランナーも勿論好き｡
-    ディカプリオ様の素晴らしさはCatch Me If You Canかウルフ・オブ・ウォールストリートを観ればわかる｡
-    90～00's年代のショーシャンクの空に､LEON､フォレスト・ガンプ､ユージュアル・サスペクツとかの今見ても面白い名作も好き｡
-    面白い映画募集中｡`,
+    ノーラン監督のSF映画､TENETとかインターステラーもインセプションも全てが好きです｡ブレードランナーも勿論好き｡`,
   },
   {
     name: "Game",
     icon: "material-symbols:stadia-controller-sharp",
     description: `3DSを押し入れから発掘してとび森とルーンファクトリー4をやっています｡
-      ノベルゲームも好きでGNOSIAもNEEDY GIRL OVERDOSEもダンガンロンパも面白かった｡
-      他にもポーションクラフトやSlay the Spireのようなチルいゲームも好きです｡`,
+      ノベルゲームも好きでGNOSIAもNEEDY GIRL OVERDOSEもダンガンロンパが好き｡`,
   },
   {
     name: "Moh-jong",
     icon: "fluent-emoji-high-contrast:mahjong-red-dragon",
     description: `麻雀が好きです｡雀魂ランクはもうそろそろ雀傑に上がりそうで上がらない｡
-    最近､スジとタテを覚えたので､もう少し上達したいです｡
-    麻雀はゲームではない｡麻雀はスポーツです｡
     実卓で打ってみたいけど､雀魂でしか打たないからルールを間違えそう｡`,
   },
   {
@@ -80,16 +67,7 @@ const hobbiesList: HobbyData[] = [
     icon: "bi:sign-merge-left",
     description: `ヨーロッパ史が大好き｡
       特にウェストファリア体制～第一次世界大戦に至るまでの経緯は何度勉強してもおもしろい｡
-      推し国家はロシア帝国です｡
-      ピョートル大帝の改革により､ロシア社会は一気に欧化した｡
-      でもそれは表面的なものであり､ウィーンやパリの人々のマネをするだけで文化の下地となる習慣や価値観を受け入れることはなかった｡
-      文化を仕入れたところで､それを受け入れる土壌がないと､それはただの模倣にすぎない｡
-      ドイツ人であるエカテリーナ二世も日記でロシアについてこのように分析していた｡
-      実際に､ロシア国内で流通する本の多くはフランス語かドイツ語で書かれていた｡
-      こんな状況と民主主義思想の浸透が重なり､知識人は自分たちはヨーロッパ人なのかスラブ人なのかというアイデンティティの危機に直面していた｡
-      それがロシア革命につながる｡
-      まあ､実際は単純に食料に困っただけだと思いますが｡(素人の個人的解釈)
-      こういう歴史の流れを見ると必然だったと思えてくる｡`,
+      推し国家はロシア帝国です｡`,
   },
   {
     name: "Write",
@@ -101,11 +79,8 @@ const hobbiesList: HobbyData[] = [
     name: "Music",
     icon: "material-symbols:library-music-outline",
     description: `SoundCloudで音楽を聴いています｡
-    House Techno Electro Kawaii future buss好きです｡
-    ボカロも邦楽も洋楽も一通り聴いてます｡
-    M3に興味があるけど一人じゃ行く気にならない｡行きたい人いないかな｡
-    好きなアーティストはAiobahn fusq PSYQUI va1ue volta RYOQUCHA KOTONOHOUSE
-    9W3R7Y PinkBamboo abysslnoiz TEMPLIME RANGE ASUNDER｡`,
+    House Techno Hi-Techが好きです｡
+    J-popだとtele 笹川真生が好きです`,
   },
 ];
 

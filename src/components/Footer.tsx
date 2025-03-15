@@ -1,12 +1,14 @@
 import { type ReactElement } from "react";
-import { Text, Divider } from "@mantine/core";
+import { Text, Divider, Flex } from "@mantine/core";
 import { styled as p } from "@panda/jsx";
 
 export default function Footer(): ReactElement {
   return (
-    <p.div h={50}>
+    <p.div h={30}>
       <Divider size="sm" />
-      <Text>なんか適当なコピーライトとContact</Text>
+      <Flex align="center" justify="center">
+        <Text>nasubi-dev</Text>
+      </Flex>
     </p.div>
   );
 }

@@ -35,13 +35,11 @@ const ExperiencesList: ExperienceData[] = [
     name: "ITパスポート合格",
     date: "2021年5月",
     state: "done",
-    description: "情報システム部史上最速で取得しました。",
   },
   {
     name: "基本情報技術者試験合格",
     date: "2024年3月",
     state: "done",
-    description: "まだ合格見込みという段階だけど､多分合格してるはず｡",
   },
   {
     name: "愛知工業大学 - 情報科学部 - 情報科学科 - コンピュータシステム専攻",
@@ -55,6 +53,12 @@ const ExperiencesList: ExperienceData[] = [
     state: "doing",
     description: "入サークル",
   },
+  {
+    name: "NxTEND",
+    date: "2024年12月 - 現在",
+    state: "doing",
+    description: "28Techのために所属"
+  }
 ];
 
 function Experience({
@@ -127,7 +131,7 @@ export default function Experiences(): ReactElement {
         </Text>
       </Center>
       <Center>
-        <p.div h={1300} m={3} mb={20} w={isMobile ? 500 : 700}>
+        <p.div h={1400} m={3} mb={20} w={isMobile ? 500 : 700}>
           {ExperiencesList.map((experience, index) => (
             <Experience
               key={experience.name}

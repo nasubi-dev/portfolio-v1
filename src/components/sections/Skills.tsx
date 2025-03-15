@@ -28,7 +28,6 @@ const skillList: SkillData[] = [
     icon: "logos:typescript-icon",
     link: "https://www.typescriptlang.org",
     description: `型がないと不安｡
-    でも､型パズルはできない｡
     サバイバルTypescriptさんいつもお世話になってます｡`,
   },
   {
@@ -49,7 +48,7 @@ const skillList: SkillData[] = [
     icon: "logos:react",
     link: "https://reactjs.org",
     description:
-      "ドキュメントも記事も多くて詰まることが少ない｡せっかくやるならエコシステムを駆使したい｡",
+      "大学に入ってから始めました｡趣味､個人制作､インターンなどの場面で使用しています｡",
   },
   {
     name: "Next",
@@ -73,7 +72,7 @@ const skillList: SkillData[] = [
     name: "Firebase",
     icon: "logos:firebase",
     link: "https://firebase.google.com",
-    description: "NoSQLが本当にTypescriptと相性が悪すぎる｡二度と使いたくない｡",
+    description: "NoSQLはもう使いたくないです",
   },
   {
     name: "supabase",
@@ -87,7 +86,7 @@ const skillList: SkillData[] = [
     icon: "logos:cloudflare-icon",
     link: "https://www.cloudflare.com",
     description: `これから勉強します｡このサイトはCloudFlare Pagesでホストしています｡
-    他にもObsidianのRemotely SaveでR2を使ってデバイス間同期をしてる｡
+    他にもObsidianのRemotely SaveでR2を使ってデバイス間同期をしてます｡
     Workersも使いたい｡
     `,
   },
@@ -121,8 +120,7 @@ const skillList: SkillData[] = [
     description: `markdown記法で書けるメモアプリ｡
       開発に直接活きることはなくとも､アイデアや思考をまとめるのに便利｡
       これもVScodeと同じで拡張機能が秘伝のタレの如く煮詰まりがち｡
-      QoL爆上がり｡
-      今はBlogのCMSとして使えないか検討中｡`,
+      QoL爆上がり｡`,
   },
 ];
 

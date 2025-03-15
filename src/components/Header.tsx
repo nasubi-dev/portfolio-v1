@@ -27,7 +27,7 @@ export default function Header(): ReactElement {
             aria-label="Twitter Account"
             color="indigo.8"
             component="a"
-            href="https://twitter.com/nasubl_"
+            href="https://twitter.com/nasubi_dev"
             size="lg"
             target="_blank"
             variant="outline"
@@ -38,7 +38,7 @@ export default function Header(): ReactElement {
             aria-label="Github Account"
             color={colorScheme === "light" ? "black" : "white"}
             component="a"
-            href="https://github.com/nasubi916"
+            href="https://github.com/nasubi-dev"
             size="lg"
             target="_blank"
             variant="outline"

@@ -17,6 +17,8 @@ import { $colorScheme, $isMobile } from "../../stores/option";
 
 import fookeys from "@/assets/fookeys.mp4";
 import m3 from "@/assets/my-monthly-mix.mp4";
+import wakaba from "@/assets/wakaba.mp4";
+import fookeysMini from "@/assets/fookeys-mini.mp4";
 
 type ProductsData = {
   name: string;
@@ -24,31 +26,50 @@ type ProductsData = {
   url?: string;
   github?: string;
   youtube?: string;
-  preview?: string;
   description: string;
 };
 
 const products: ProductsData[] = [
   {
+    name: "fookeys-mini",
+    image: "",
+    url: "https://fookeys-mini.vercel.app/",
+    github: "https://github.com/nasubi916/fookeys-mini",
+    youtube: "https://youtube.com/shorts/KTu7BrZidKM",
+    description: `スマホに対応したfookeysです｡
+    ただスマホに対応しただけではなく､いただいたフィードバックを参考にルールを簡易版として改良しました｡
+    私はイラスト､音楽以外の実装を担当しました｡
+    `,
+  },
+  {
+    name: "wakaba",
+    image: "",
+    github: "https://github.com/wappon28dev/wakaba",
+    description: `高校の友人たちと参加しました｡
+    株式会社KDDIアジャイル開発センター様のお題｢住みやすいスマートシティと従業員の働き方｣の解決方法として制作しました｡
+    Hack Aichi 2024 にて最優秀賞(愛知県知事賞)を頂きました｡また技育展2025 に決勝進出しました｡
+    私はフロントエンドの半分を担当しました｡`,
+  },
+  {
     name: "fookeys",
     image: "https://fookeys.com/images/logo.png",
     url: "https://fookeys.vercel.app/",
     youtube: "https://youtu.be/-RsJv_yJDFc",
-    preview: "fookeys",
     github: "https://github.com/nasubi916/fookeys",
-    description:
-      `fookeysはブラウザで動作する1対1の対戦型カードゲームです｡
-      Vue + firebaseで作成しました｡`,
+    description: `fookeysはブラウザで動作する1対1の対戦型カードゲームです｡
+      Vue + firebaseで作成しました｡
+      技育博 2024 vol.4 にてCARTA,DeNA,YUMEMI賞を頂きました｡
+      私はイラスト､音楽以外の実装を担当しました｡`,
   },
   {
     name: "my-monthly-mix",
     image: "https://my-monthly-mix.vercel.app/logo.png",
-    preview: "m3",
-    github: "https://github.com/wappon28dev/my-monthly-mix", // ?
+    github: "https://github.com/wappon28dev/my-monthly-mix",
     description: `my-monthly-mixは｡はサークル内ハッカソンにて友人と二人で､約2週間の短期開発を行いました｡
       私はフロントエンドを担当し､vite + Reactで制作しました｡
       my-monthly-mixは今月聴いた曲で共有したい3曲を選び､投稿するサービスです｡
-      YouTubeとSpotifyに対応しています｡`,
+      YouTubeとSpotifyに対応しています｡
+      私はフロントエンドの実装をすべて担当しました｡`,
   },
 ];
 
@@ -58,12 +79,14 @@ function Product({
   description,
   youtube,
   url,
+  github,
 }: {
   name: string;
   icon: string;
   description: string;
   url: string;
   youtube?: string;
+  github?: string;
 }): ReactElement {
   $isMobile.set(useMediaQuery(`(max-width: ${em(750)})`) ?? false);
   const isMobile = $isMobile.value ?? false;
@@ -74,7 +97,19 @@ function Product({
           <Icon height={30} icon={icon} width={30} />
           <Text inherit>{name}</Text>
         </Flex>
-        <video controls src={name === "fookeys" ? fookeys : m3} />
+        <video
+          controls
+          src={(function getVideoSrc() {
+            if (name === "fookeys") return fookeys;
+            if (name === "my-monthly-mix") return m3;
+            if (name === "wakaba") return wakaba;
+            if (name === "fookeys-mini") return fookeysMini;
+            return wakaba;
+          })()}
+        >
+          <track kind="captions" />
+        </video>
+
         <p.div fontSize={16}>
           <Spoiler hideLabel="" maxHeight={200} showLabel="もっとみせる">
             <Text inherit>{description}</Text>
@@ -89,7 +124,7 @@ function Product({
               target="_blank"
               variant="outline"
             >
-              Link : {url}
+              demo : {url}
             </Button>
           )}
           {youtube !== "" && (
@@ -102,6 +137,19 @@ function Product({
                 variant="outline"
               >
                 YouTube : {youtube}
+              </Button>
+            </div>
+          )}
+          {github !== "" && (
+            <div>
+              <Button
+                component="a"
+                href={github}
+                size="xs"
+                target="_blank"
+                variant="outline"
+              >
+                GitHub : {github}
               </Button>
             </div>
           )}
@@ -134,6 +182,7 @@ export default function Products(): ReactElement {
             <Product
               key={product.name}
               description={product.description}
+              github={product.github ?? ""}
               icon={product.image}
               name={product.name}
               url={product.url ?? ""}
